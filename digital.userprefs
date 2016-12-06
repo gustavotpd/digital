@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{45D97B09-05E5-40A8-BDC1-AA825374634E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="digital Status">
+    <Files>
+      <File FileName="digital/BalancePage.xaml" Line="52" Column="32" />
+      <File FileName="digital/MainPage.xaml" Line="18" Column="31" />
+      <File FileName="digital/MainPage.xaml.cs" Line="22" Column="29" />
+      <File FileName="digital/obj/Debug/digital.MainPage.xaml.g.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="19" Column="11" />
+      <File FileName="Droid/MainActivity.cs" Line="15" Column="232" />
+      <File FileName="digital/App.cs" Line="22" Column="48" />
+      <File FileName="digital/Models/BalanceItem.cs" Line="14" Column="1" />
+      <File FileName="digital/ViewModels/BalanceItemsViewModel.cs" Line="1" Column="1" />
+      <File FileName="digital/Helpers/BalanceItemHelper.cs" Line="46" Column="35" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="digital Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/gustavo/digital/digital/BalancePage.xaml.cs" line="86" column="1" />
+      <Breakpoint file="/Users/gustavo/digital/digital/BalancePage.xaml.cs" line="90" column="1" />
+      <Breakpoint file="/Users/gustavo/digital/digital/BalancePage.xaml.cs" line="82" column="1" />
+      <Breakpoint file="/Users/gustavo/digital/digital/BalancePage.xaml.cs" line="94" column="1" />
+      <Breakpoint file="/Users/gustavo/digital/digital/BalancePage.xaml.cs" line="98" column="1" />
+      <Breakpoint file="/Users/gustavo/digital/digital/ViewModels/MonkeysViewModel.cs" line="26" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../Downloads/Desktop/Mobile TFS1/PSEA.Mobile.Page\ViewModel\LocalInfoViewModel.cs" line="256" offsetX="305" offsetY="4080" expression="obj" liveUpdate="False" />
+    <Watch file="../Downloads/Desktop/Mobile TFS1/PSEA.Mobile.Page\ViewModel\TabPages\RegionLocationsViewModel.cs" line="26" offsetX="277" offsetY="400" expression="this.Local" liveUpdate="False" />
+    <Watch file="../Downloads/Desktop/Mobile TFS1/PSEA.Mobile.Data\Managers\DBManager.cs" line="271" offsetX="522" offsetY="4320" expression="obj" liveUpdate="False" />
+    <Watch file="../Downloads/Desktop/Mobile TFS1/Mobile\Mobile.Forms\Mobile.Forms.Release\Pages\Calendar\EventCalendarListPage.cs" line="214" offsetX="522" offsetY="3408" expression="temp.SelectedDate.Date" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.digital.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A3FF4321-2D3B-4CA0-89DE-BB6D2D8C4B36" />
+  <MonoDevelop.Ide.ItemProperties.digital.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.LGK430YT7D9TZH" />
+</Properties>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="digital.MainPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:digital;assembly=digital"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             >
+
+	<xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient Rotation="0">
+            <xfg:GradientStep StepColor="#2fb49f" StepPercentage="0" />
+            <xfg:GradientStep StepColor="#2fb49f" StepPercentage=".25" />			
+			<xfg:GradientStep StepColor="#022e7b" StepPercentage=".5" />
+            <xfg:GradientStep StepColor="#022e7b" StepPercentage="1" />
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+	<ScrollView>
+
+	    <!--  main page grid  -->
+	    <Grid RowSpacing="0">
+	        <Grid.RowDefinitions>
+	            <RowDefinition Height="80" />
+	            <RowDefinition Height="100" />
+				<RowDefinition Height="*" />
+
+	        </Grid.RowDefinitions>
+
+	        <!--  row background colors  -->
+	        <BoxView Grid.Row="1" Color="#022e7b" />
+	        <BoxView Grid.Row="1" Color="#0099b5" />
+
+	        <StackLayout Padding="0,0,0,0" Grid.Row="0" Orientation="Vertical" Spacing="0">		
+		        <!--  title  -->
+		        <Label x:Name="CustomerName" FontSize="20" FontFamily="Roboto" HorizontalOptions="Center"		               
+					TextColor="#ffffff" VerticalOptions="Center" XAlign="Center"/>
+		               			
+				<Label x:Name="BankDetais" FontSize="13" FontFamily="Roboto" XAlign="Center"
+						               TextColor="#ffffff"  />
+				<!--<Label x:Name="Agency" FontSize="13" FontFamily="Roboto" Text="{Binding Account, StringFormat='Conta {0:N}'}"
+		               TextColor="#ffffff"  /> -->
+			</StackLayout>
+
+			<StackLayout Padding="0,0,0,0" Grid.Row="1" Orientation="Vertical" >		
+		        <!--  title  -->
+		        <Label FontSize="18" FontFamily="Roboto" Text="Saldo Atual"
+		               TextColor="#ffffff" XAlign="Center" LineBreakMode="WordWrap"/>	               			
+				<Label x:Name="CurrentBalance" FontSize="18" FontAttributes="Bold" FontFamily="Roboto"
+		               TextColor="#ffffff" XAlign="Center" LineBreakMode="WordWrap"/>
+				<Label FontSize="10" FontFamily="Roboto" Text="Ver saldo"
+		               TextColor="#ffffff" XAlign="Center" />	              
+			</StackLayout>
+									
+	        <!--  inner grid for button layouts  -->
+	        <Grid Padding="10,20,10,20" Grid.Row="2" ColumnSpacing="10" HorizontalOptions="Center"
+	              RowSpacing="10" VerticalOptions="Center">
+	            <Grid.RowDefinitions>
+	                <RowDefinition Height="96.8" />
+	                <RowDefinition Height="96.8" />
+					<RowDefinition Height="96.8" />
+	            </Grid.RowDefinitions>
+	            <Grid.ColumnDefinitions>
+	                <ColumnDefinition Width="145" />
+	                <ColumnDefinition Width="145" />
+	            </Grid.ColumnDefinitions>
+
+	            <controls:SwitchboardButton Grid.Row="0" Grid.Column="0" Icon="balance.png"
+	                                        Label="Extrato" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="BalanceButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+	            <controls:SwitchboardButton Grid.Row="0" Grid.Column="1" Icon="card.png"
+	                                        Label="Cartões" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="CardButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+	            <controls:SwitchboardButton Grid.Row="1" Grid.Column="0" Icon="transferences.png"
+	                                        Label="Transferências" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="TransferencesButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+	            <controls:SwitchboardButton Grid.Row="1" Grid.Column="1" Icon="loan.png"
+	                                        Label="Empréstimo" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="LoanButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+				<controls:SwitchboardButton Grid.Row="2" Grid.Column="0" Icon="payment.png"
+	                                        Label="Pagamento" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="PaymentButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+	            <controls:SwitchboardButton Grid.Row="2" Grid.Column="1" Icon="attendance.png"
+	                                        Label="Solicitação de atendimento" BackgroundColor="White">
+	                <controls:SwitchboardButton.GestureRecognizers>
+	                    <TapGestureRecognizer Tapped="AttendanceButtonTapped" />
+	                </controls:SwitchboardButton.GestureRecognizers>
+	            </controls:SwitchboardButton>
+
+	        </Grid>
+	    </Grid>
+	</ScrollView>
+
+</ContentPage>

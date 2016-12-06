@@ -1,0 +1,10 @@
+/Users/gustavo/digital/iOS.Control/obj/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/gustavo/digital/iOS.Control/obj/Release/optimized/
+/Users/gustavo/digital/iOS.Control/bin/Release/DropDown.iOS.Control.dll.mdb
+/Users/gustavo/digital/iOS.Control/bin/Release/DropDown.iOS.Control.dll
+/Users/gustavo/digital/iOS.Control/obj/Release/DropDown.iOS.Control.dll
+/Users/gustavo/digital/iOS.Control/obj/Release/DropDown.iOS.Control.dll.mdb
+/Users/gustavo/digital/iOS.Control/bin/Release/digital.dll
+/Users/gustavo/digital/iOS.Control/bin/Release/Xamarin.Forms.Core.dll
+/Users/gustavo/digital/iOS.Control/bin/Release/Xamarin.Forms.Xaml.dll
+/Users/gustavo/digital/iOS.Control/bin/Release/Xamarin.Forms.Platform.dll

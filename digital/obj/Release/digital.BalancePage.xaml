@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+        xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        x:Class="digital.BalancePage"
+		xmlns:design="clr-namespace:digital;assembly=digital"
+		xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+        xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		BindingContext="{x:Static design:ViewModelLocator.BalanceItemsViewModel}"
+    >
+
+	<xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient Rotation="0">
+            <xfg:GradientStep StepColor="#2fb49f" StepPercentage="0" />
+            <xfg:GradientStep StepColor="#022e7b" StepPercentage=".5" />
+            <xfg:GradientStep StepColor="#022e7b" StepPercentage="1" />
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+    <ContentPage.Content>	 	
+        <StackLayout>
+                		
+			<StackLayout Padding="0,0,0,0" Orientation="Vertical" >		
+		        <!--  title  -->
+		        <Label FontSize="18" FontFamily="Roboto" Text="Saldo Atual"
+		               TextColor="#ffffff" XAlign="Center" LineBreakMode="WordWrap"/>	               			
+				<Label x:Name="CurrentBalance" FontSize="18" FontAttributes="Bold" FontFamily="Roboto"
+		               TextColor="#ffffff" XAlign="Center" LineBreakMode="WordWrap"/>
+			</StackLayout>
+
+			<StackLayout x:Name="DropDownContent" Padding="0,0,0,0" Grid.Row="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">		
+		       
+			</StackLayout>
+
+			
+			
+			<Label Margin="10,10,10,10" FontSize="20" FontFamily="Roboto" HorizontalOptions="Center"		               
+					TextColor="#ffffff" VerticalOptions="Center" XAlign="Center" Text="Julho 2016"/>
+
+			
+            <ListView x:Name="TransactionItems"
+                    HasUnevenRows="true"
+                    GroupShortNameBinding = "{Binding Key}"
+                    IsGroupingEnabled = "false"
+                    GroupDisplayBinding = "{Binding Key}">
+				<ListView.BackgroundColor>
+					<OnPlatform x:TypeArguments="Color"
+                                        Android="Transparent"
+                                        WinPhone="Transparent"
+                                        iOS="Transparent">
+					</OnPlatform>
+				</ListView.BackgroundColor>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*" />
+								
+
+									
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <controls:CircleImage 
+										HeightRequest="40"
+										HorizontalOptions="Start"
+										VerticalOptions="Start"
+										Aspect="AspectFill"
+                                        WidthRequest="40"
+                                        Grid.RowSpan="2"
+                                        Source="{Binding Image}"
+										Margin="0,0,0,0"
+										/>
+
+								<Label Grid.Column="0" Grid.Row="1"
+                                       Text="{Binding TransactionNumber}"
+									   FontFamily="Roboto"
+									   FontSize="8"
+									   TextColor= "Silver"
+									   VerticalOptions="End"
+									   Margin = "0,20,0,0"
+									   />
+								
+                                <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+									   FontFamily="Roboto"
+									   FontSize="10"
+									   FontAttributes="Bold"
+									   TextColor= "Silver"
+									   VerticalOptions="End"
+									   Margin = "0,0,0,0" />
+
+								<Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       VerticalOptions="Start"
+									   FontFamily="Roboto"
+									   FontSize="10"
+									   TextColor= "Silver"
+                                       Text="{Binding LocationAndDate}"/>
+
+								<Label Grid.Column="2"
+                                       Text="{Binding TransactionValue}"
+									   FontFamily="Roboto"
+									   FontSize="10"
+									   TextColor= "Silver"
+									   VerticalOptions="End"
+									   HorizontalOptions="End"/>
+
+								<Label Grid.Column="2"
+                                       Grid.Row="1"
+                                       VerticalOptions="Start"
+									   HorizontalOptions="End"
+                                       Text="{Binding Balance}"
+									   FontFamily="Roboto"
+									   FontSize="10"
+									   TextColor= "Silver"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
